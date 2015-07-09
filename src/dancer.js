@@ -52,11 +52,14 @@ Dancer.prototype.step = function() {
 };
 
 Dancer.prototype.setPosition = function(top,left) {
-  var styleSettings = {
+  var dancer = this;
+  (function(){
+    var styleSettings = {
     top: top,
     left: left
-  };
-  this.$node.css(styleSettings);
+    };
+    dancer.$node.css(styleSettings);
+  })();
 };
 
 

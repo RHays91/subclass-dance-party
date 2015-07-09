@@ -6,8 +6,8 @@ ColoredDancer.prototype = Object.create(Dancer.prototype);
 ColoredDancer.prototype.constructor = ColoredDancer;
 
 ColoredDancer.prototype.step = function(){
-  var colorArray = ["10px solid red","10px solid green","10px solid blue"];
-  var color = colorArray[Math.floor(Math.random()*4)];
+  var colorArray = ["10px solid red","5px solid green","10px solid blue", "12px solid yellow", "8px solid orange", "7px solid purple"];
+  var color = colorArray[Math.floor(Math.random()*6)];
   Dancer.prototype.step.call(this);
   var styleSettings = {
     backgroundColor : color

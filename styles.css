@@ -39,11 +39,20 @@ body, a:link, a:visited, a:active{
   top: 100px;
 
 }
+.redDot{
+  border:10px solid red;
+  border-radius:10px;
+  position:absolute;
+  -webkit-transition:top .05s, left .05s;
+  transition:top .05s, left .05s;
+}
 img{
   padding: 0 10px;
   max-height: 70px;
   max-width: auto;
   position:absolute;
+  -webkit-transition:top 5s, left 5s;
+  transition:top 5s, left 5s;
 }
 img:hover{
   max-height: 140px;
