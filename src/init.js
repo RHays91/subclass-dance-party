@@ -10,7 +10,7 @@ $(document).ready(function(){
     }
   };
 
-  $(".addCatButton").on("click", function(event){
+  $(".feline").on("click", function(event){
 
     // make a catDancer with a random position
     var dancer = dancerFactory.createDancer(
@@ -22,7 +22,7 @@ $(document).ready(function(){
     $('body').append(dancer.$node);
   });
 
-  $(".addDancerButton").on("click", function(event){
+  $(".blinker").on("click", function(event){
 
     // make a blinkyDancer with a random position
     var dancer = dancerFactory.createDancer(
@@ -34,7 +34,31 @@ $(document).ready(function(){
     $('body').append(dancer.$node);
   });
 
-  $(".lineupDancerButton").on("click", function(event){
+  $(".mover").on("click", function(event){
+
+    // make a blinkyDancer with a random position
+    var dancer = dancerFactory.createDancer(
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      Math.random() * 1000,"MovingDancer"
+    );
+    window.dancers.push(dancer);
+    $('body').append(dancer.$node);
+  });
+
+  $(".color").on("click", function(event){
+
+    // make a blinkyDancer with a random position
+    var dancer = dancerFactory.createDancer(
+      $("body").height() * Math.random(),
+      $("body").width() * Math.random(),
+      Math.random() * 1000,"ColoredDancer"
+    );
+    window.dancers.push(dancer);
+    $('body').append(dancer.$node);
+  });
+
+  $(".lineup").on("click", function(event){
     lineUpDancers();
   });
 
