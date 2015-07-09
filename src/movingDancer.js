@@ -7,5 +7,5 @@ MovingDancer.prototype.constructor = MovingDancer;
 
 MovingDancer.prototype.step = function(){
   Dancer.prototype.step.call(this);
-  this.$node.toggleClass('move');
+  this.$node.animate().toggleClass('move');
 };

@@ -8,10 +8,19 @@ body{
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
+  text-decoration: none;
 }
 .title, .button{
   padding:5px 12px;
   float:right;
+  border: 1px solid lightblue;
+  border-radius: 2px;
+}
+.button{
+  margin-right: 3px;
+}
+.lineup{
+  margin-right: 10px;
 }
 .topbar{
   height:32px;
@@ -28,7 +37,7 @@ body, a:link, a:visited, a:active{
 .move{
   position: relative;
   top: 100px;
-  left: 200px;
+
 }
 img{
   padding: 0 10px;
