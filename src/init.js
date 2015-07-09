@@ -5,8 +5,10 @@ var movingDancer = null;
 $(document).ready(function(){
 
   var lineUpDancers = function(){
+    if (movingDancer !== null){
     movingDancer.$node.remove();
     movingDancer = null;
+    }
     var centerHeight = $("body").height()/2;
     var centerWidth = $("body").width()/(cats.length+1);
     for (var i = 0; i < cats.length; i++) {

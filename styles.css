@@ -10,6 +10,17 @@ body, a:link, a:visited, a:active{
   color: lightblue;
   text-decoration: none;
 }
+.bg {
+  background-repeat: no-repeat;
+  -webkit-transform: rotateZ(45deg);
+  transform: perspective(15em) rotateX(60deg);
+  position: relative;
+  left:auto;
+  right:auto;
+  bottom: 0;
+  width: 75%;
+  z-index: -100;
+}
 .title, .button{
   padding:5px 12px;
   float:right;
@@ -46,14 +57,15 @@ body, a:link, a:visited, a:active{
   -webkit-transition:top .05s, left .05s;
   transition:top .05s, left .05s;
 }
-img{
+img.cat-dancer{
   padding: 0 10px;
   max-height: 70px;
   max-width: auto;
   position:absolute;
   -webkit-transition:top 5s, left 5s;
   transition:top 5s, left 5s;
+  z-index: 100;
 }
-img:hover{
+img.cat-dancer:hover{
   max-height: 140px;
 };
