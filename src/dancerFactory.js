@@ -16,10 +16,10 @@ DancerFactory.prototype.createDancer = function(top,left,timeBetweenSteps,option
       var movingDancer = new MovingDancer(top,left,timeBetweenSteps);
       movingDancer.step();
       return movingDancer;
-    case "GifDancer":
-      var gifDancer = new GifDancer(top,left,timeBetweenSteps);
-      gifDancer.step();
-      return gifDancer;
+    case "CatDancer":
+      var catDancer = new CatDancer(top,left,timeBetweenSteps);
+      catDancer.step();
+      return catDancer;
   }
   return new Dancer(top,left,timeBetweenSteps);
 };

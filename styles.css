@@ -30,3 +30,9 @@ body, a:link, a:visited, a:active{
   top: 100px;
   left: 200px;
 }
+img{
+  padding: 0 10px;
+  max-height: 70px;
+  max-width: auto;
+  position:absolute;
+}
