@@ -45,3 +45,6 @@ img{
   max-width: auto;
   position:absolute;
 }
+img:hover{
+  max-height: 140px;
+};

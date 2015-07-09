@@ -1,16 +1,17 @@
 $(document).ready(function(){
   window.dancers = [];
+  window.cats = [];
   var dancerFactory = new DancerFactory();
 
   var lineUpDancers = function(){
     var centerHeight = $("body").height()/2;
-    var centerWidth = $("body").width()/(dancers.length+1);
-    for (var i = 0; i < dancers.length; i++) {
-      dancers[i].setPosition(centerHeight,centerWidth*(i+1));
+    var centerWidth = $("body").width()/(cats.length+1);
+    for (var i = 0; i < cats.length; i++) {
+        cats[i].setPosition(centerHeight,centerWidth*(i+1));
     }
   };
 
-  $(".feline").on("click", function(event){
+  $(".cat").on("click", function(event){
 
     // make a catDancer with a random position
     var dancer = dancerFactory.createDancer(
@@ -19,6 +20,7 @@ $(document).ready(function(){
       Math.random() * 1000,"CatDancer"
     );
     window.dancers.push(dancer);
+    window.cats.push(dancer);
     $('body').append(dancer.$node);
   });
 
@@ -63,3 +65,11 @@ $(document).ready(function(){
   });
 
 });
+
+$(".cat-dancer").on("mouseover", function() { 
+    var src = "catLeader.gif";
+    $(this).attr("src", src);
+  }).on("mouseout", function() {
+    var src = "cat.gif";
+    $(this).attr("src", src);
+  });
